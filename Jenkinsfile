@@ -32,9 +32,7 @@ pipeline {
         stage('Deploy to Nexus') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'master') {
                         sh "mvn deploy"
-                    }
                 }
             }
         }
