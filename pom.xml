@@ -79,6 +79,19 @@
     </repository>
   </repositories>
 
+  <distributionManagement>
+    <repository>
+      <id>msaas-releases</id>
+      <name>msaas-releases</name>
+      <url>https://maven.dev01.metaphor-platform.com/content/repositories/msaas-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>msaas-snapshots</id>
+      <name>msaas-snapshots</name>
+      <url>https://maven.dev01.metaphor-platform.com/content/repositories/msaas-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
