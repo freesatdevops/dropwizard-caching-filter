@@ -11,7 +11,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- *
  * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
  */
 public class StatefulCacheEntry<T> {
@@ -19,8 +18,7 @@ public class StatefulCacheEntry<T> {
   private AtomicInteger state = new AtomicInteger(0); // 0 - new, 1 - pending (not ready), 2 - ready
   private final AtomicReference<T> ar = new AtomicReference<>();
 
-  public StatefulCacheEntry() {
-  }
+  public StatefulCacheEntry() {}
 
   public StatefulCacheEntry(final T data) {
     ar.set(data);
@@ -62,6 +60,4 @@ public class StatefulCacheEntry<T> {
       notifyAll();
     }
   }
-
 }
-

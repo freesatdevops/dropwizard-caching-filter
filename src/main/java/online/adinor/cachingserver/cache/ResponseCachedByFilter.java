@@ -15,7 +15,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- *
  * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
  */
 @Inherited
@@ -25,4 +24,3 @@ import java.lang.annotation.Target;
 public @interface ResponseCachedByFilter {
   int value() default 1000; // 1 second cache default TTL
 }
-

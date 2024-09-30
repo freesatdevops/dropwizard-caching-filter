@@ -7,23 +7,20 @@
  */
 package online.adinor.cachingserver.cache;
 
-import online.adinor.cachingserver.cache.storage.HttpResponse;
-import online.adinor.cachingserver.cache.storage.StatefulCacheEntry;
-import online.adinor.cachingserver.cache.config.Options;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.Context;
-
-import java.io.IOException;
+import com.google.common.cache.Cache;
 import java.lang.reflect.Method;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.google.common.cache.Cache;
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerRequestFilter;
+import javax.ws.rs.container.ResourceInfo;
+import javax.ws.rs.core.Context;
+import online.adinor.cachingserver.cache.config.Options;
+import online.adinor.cachingserver.cache.storage.HttpResponse;
+import online.adinor.cachingserver.cache.storage.StatefulCacheEntry;
 
 /** @author Andrey Lebedenko (andrey.lebedenko@gmail.com) */
 public class CachingRequestFilter implements ContainerRequestFilter {

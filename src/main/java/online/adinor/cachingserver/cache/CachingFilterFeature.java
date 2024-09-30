@@ -20,7 +20,9 @@ import java.util.function.Function;
 
 import com.google.common.cache.Cache;
 
-/** @author Andrey Lebedenko (andrey.lebedenko@gmail.com) */
+/**
+ * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
+ */
 public class CachingFilterFeature implements Feature {
 
   private static final Logger logger = LoggerFactory.getLogger(CachingFilterFeature.class);

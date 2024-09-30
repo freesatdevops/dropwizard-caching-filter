@@ -8,12 +8,11 @@
 package online.adinor.cachingserver.cache;
 
 /**
- *
  * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
  */
 public enum Role {
-  Producer, Consumer;
+  Producer,
+  Consumer;
 
   public static final String OPTION_NAME = "caching_filter_my_role";
 }
-

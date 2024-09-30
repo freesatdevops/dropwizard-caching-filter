@@ -8,7 +8,6 @@
 package online.adinor.cachingserver.cache.config;
 
 /**
- *
  * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
  */
 public class Options {
@@ -16,4 +15,3 @@ public class Options {
   public static final String KEY = "caching_filter_key";
   public static final String CACHE_ENTRY = "caching_filter_entry";
 }
-
