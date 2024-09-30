@@ -78,6 +78,19 @@
       </snapshots>
     </repository>
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>msaas-central-proxy</id>
+      <name>msaas-central-proxy</name>
+      <url>https://maven.dev01.metaphor-platform.com/content/repositories/central</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 
   <distributionManagement>
     <repository>
