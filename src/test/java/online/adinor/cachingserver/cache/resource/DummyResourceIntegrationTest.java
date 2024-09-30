@@ -29,7 +29,7 @@ public class DummyResourceIntegrationTest {
 
   @ClassRule
   public static final DropwizardAppRule<MainConfiguration> DROPWIZARD =
-      new DropwizardAppRule<MainConfiguration>(
+      new DropwizardAppRule<>(
           MainApplication.class, ResourceHelpers.resourceFilePath("test-config.yml"));
 
   @Before
