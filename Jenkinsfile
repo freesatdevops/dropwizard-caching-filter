@@ -6,7 +6,7 @@ pipeline {
         MAVEN_OPTS = "-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
     }
     tools {
-        jdk "JDK17"
+        jdk "AdoptOpenJDK8"
     }
     stages {
         stage('Build & Test') {
