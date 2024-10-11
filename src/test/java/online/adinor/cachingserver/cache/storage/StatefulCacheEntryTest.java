@@ -9,9 +9,8 @@ package online.adinor.cachingserver.cache.storage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.Test;
-
 import java.util.concurrent.atomic.AtomicBoolean;
+import org.junit.Test;
 
 /**
  *
@@ -84,4 +83,3 @@ public class StatefulCacheEntryTest {
   }
 
 }
-

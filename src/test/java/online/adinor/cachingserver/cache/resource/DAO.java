@@ -10,8 +10,6 @@ package online.adinor.cachingserver.cache.resource;
 import java.util.function.BiFunction;
 import org.joda.time.Instant;
 
-import java.util.function.Supplier;
-
 /**
  * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
  */

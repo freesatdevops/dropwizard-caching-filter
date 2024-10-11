@@ -29,7 +29,7 @@ public class DummyResourceIntegrationTest {
 
   @ClassRule
   public static final DropwizardAppRule<MainConfiguration> DROPWIZARD =
-      new DropwizardAppRule<MainConfiguration>(
+      new DropwizardAppRule<>(
           MainApplication.class, ResourceHelpers.resourceFilePath("test-config.yml"));
 
   @Before
@@ -142,7 +142,9 @@ public class DummyResourceIntegrationTest {
     final Response response1b =
         client
             .target(
-                String.format("http://localhost:%d/cached/1?query=abc", DROPWIZARD.getLocalPort()))
+                String.format(
+                    "http://localhost:%d/cached/1?query=abc&unexpected=ignored",
+                    DROPWIZARD.getLocalPort()))
             .request()
             .get();
 

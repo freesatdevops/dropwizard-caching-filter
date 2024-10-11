@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map.Entry;
 
 /**
- *
  * @author Andrey Lebedenko (andrey.lebedenko@gmail.com)
  */
 public class HttpResponse {
@@ -25,8 +24,7 @@ public class HttpResponse {
         responseContext.getStatus(),
         responseContext.getStringHeaders(),
         responseContext.getLength(),
-        responseContext.getEntity()
-    );
+        responseContext.getEntity());
   }
 
   /**
@@ -74,7 +72,8 @@ public class HttpResponse {
   }
 
   public Response asResponse() {
-    final Response.ResponseBuilder responseBuilder = Response.status(getStatusCode()).entity(getEntity());
+    final Response.ResponseBuilder responseBuilder =
+        Response.status(getStatusCode()).entity(getEntity());
     for (Entry<String, List<String>> e : getHeaders().entrySet()) {
       for (String v : e.getValue()) {
         responseBuilder.header(e.getKey(), v);
@@ -83,4 +82,3 @@ public class HttpResponse {
     return responseBuilder.build();
   }
 }
-
