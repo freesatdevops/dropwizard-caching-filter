@@ -41,7 +41,7 @@ public class CachingResponseFilter implements ContainerResponseFilter {
   @Override
   public void filter(
       ContainerRequestContext requestContext, ContainerResponseContext responseContext) {
-    synchronized (resourceInfo) {
+    synchronized (this) {
       final Optional<ResponseCachedByFilter> annotation =
           Optional.ofNullable(resourceInfo)
               .map(ResourceInfo::getResourceMethod)
